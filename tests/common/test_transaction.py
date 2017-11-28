@@ -4,7 +4,9 @@ Tests for transaction validation are separate.
 from copy import deepcopy
 
 from base58 import b58encode, b58decode
-from pytest import raises
+from pytest import raises, mark
+
+pytestmark = mark.tendermint
 
 
 def test_input_serialization(ffill_uri, user_pub):
